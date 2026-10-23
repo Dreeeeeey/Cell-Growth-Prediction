@@ -1,6 +1,5 @@
 # =====================================================================
 # MAIN PROGRAM
-# Your code starts here. This is the file that will be run.
 # =====================================================================
 
 import src.functions as sf  # This allows you to access functions from functions.py using sf.function_name()
