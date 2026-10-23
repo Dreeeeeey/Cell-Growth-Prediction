@@ -125,7 +125,7 @@ Because the model includes interaction terms, these single-variable curves descr
 - Conditions involving variables the model does not include, such as dissolved oxygen, osmolality, or a different cell line.
 ### Advantages and Limitations
  
-**Advantages.**
+**Advantages:**
  
 - Hyperparameters were chosen by cross-validation, and the test set was kept separate, so the reported error is an honest estimate.
 - Both model families were compared on the same data with the same metric, which makes the comparison fair and reproducible.
@@ -133,7 +133,8 @@ Because the model includes interaction terms, these single-variable curves descr
 - Its weights and smooth response curves make the effect of each variable easy to inspect and explain.
 - Its training and validation errors are close, which suggests stable behavior on new data.
 - The extrapolation warning makes the model's boundaries visible to the user.
-**Limitations.**
+
+**Limitations:**
  
 - The test R² of 0.22 means the model explains only about a fifth of the variation in growth rate. It captures the broad trends but not most of the culture-to-culture scatter, which probably comes from measurement noise and from factors that are not in the model.
 - Only four variables are included, and the data comes from a single dataset, so the model describes only the conditions it has seen.
