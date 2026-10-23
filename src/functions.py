@@ -13,9 +13,6 @@ from sklearn.metrics import mean_squared_error
 TABLES_DIR = "tables"
 FIGURES_DIR = "figures"
 
-
-# ----------------------------------------------------------------------
-# Simple helpers
 # ----------------------------------------------------------------------
 def calculate_average(limits):
     return sum(limits) / len(limits)
@@ -146,7 +143,7 @@ def plot_model_curves(searches, X_train, y_train, X_test, y_test, feature_names)
                  fontweight='bold')
     save_figure("model_curves.png")
 # ----------------------------------------------------------------------
-# Interpreting the polynomial model (Unit 4b, "Interpreting linear models")
+# Interpreting the polynomial model
 # ----------------------------------------------------------------------
 def print_polynomial_equation(pipeline, feature_names):
     """

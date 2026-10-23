@@ -24,7 +24,7 @@ TARGET = 'Specific Growth Rate [d^-1]'
 MODEL_NAMES = ["Polynomial", "KNN"]
 
 # If the polynomial's validation RMSE is within 5 % of the KNN's, we prefer
-# the polynomial (simpler and easier to interpret, see Unit 4b "Additional notes").
+# the polynomial (simpler and easier to interpret).
 TOLERANCE = 0.05
 
 
@@ -101,7 +101,7 @@ class Batch:
             self.searches[name] = search
 
             # Warn if the best value is at the edge of the grid
-            # (Unit 4b: then a wider range might be even better)
+            # (then a wider range might be even better)
             for param, values in search.param_grid.items():
                 best_value = search.best_params_[param]
                 if isinstance(best_value, int) and best_value == max(values):
@@ -131,7 +131,7 @@ class Batch:
             print(f"{'':11s} | R2    train: {r['Train R2']:.4f}  test: {r['Test R2']:.4f}")
 
         # ----- Select the model -----
-        # We use the validation RMSE (not the test set) to choose, so the
+        # We use the validation RMSE to choose, so the
         # test set stays untouched and only evaluates the final model.
         val_poly = results.loc[results['Model'] == 'Polynomial', 'Validation RMSE'].iloc[0]
         val_knn = results.loc[results['Model'] == 'KNN', 'Validation RMSE'].iloc[0]
