@@ -13,7 +13,7 @@ ph_optimal = sf.calculate_average(PH_LIMITS)
 temperature_optimal = sf.calculate_average(TEMPERATURE_LIMITS)
 
 batch = Batch(
-    batch_id=2,
+    batch_id=1,
     ph_opt=ph_optimal,
     temperature_opt=temperature_optimal
 )
@@ -31,6 +31,6 @@ batch.make_learning_curve()
 batch.predict_growth_rate(
     temperature=temperature_optimal,
     ph=ph_optimal,
-    glucose=15.5,  # mM
+    glucose=13,  # mM
     lactate=2.1  # mM
 )
